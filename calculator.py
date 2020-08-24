@@ -9,22 +9,14 @@ def interface():
         if choice == '9':
             return
         elif choice == '1':
-            HDL_driver()
+            driver('HDL')
         elif choice == '2':
-            LDL_driver()
+            driver('LDL')
 
-def HDL_driver():
-    # get input
-    hdl = get_input('HDL')
-    # check if HDL is normal
-    response = check('HDL', hdl)
-    # output
-    output('HDL', hdl, response)
-
-def LDL_driver():
-    ldl = get_input('LDL')
-    response = check('LDL', ldl)
-    output('LDL', ldl, response)
+def driver(choice: str):
+    ldl = get_input(choice)
+    response = check(choice, ldl)
+    output(choice, ldl, response)
 
 def get_input(input_type: str) -> int:
     return int(input('Enter {} test result: '.format(input_type)))

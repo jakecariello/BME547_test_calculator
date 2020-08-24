@@ -18,5 +18,9 @@ def HDL_driver():
     # output
     output(response)
 
+def get_input() -> int:
+    return int(input('Enter HDL test result: '))
+
+
 interface()
 

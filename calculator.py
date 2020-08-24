@@ -15,17 +15,17 @@ def interface():
 
 def HDL_driver():
     # get input
-    hdl = get_input_hdl()
+    hdl = get_input('HDL')
     # check if HDL is normal
     response = check_hdl(hdl)
     # output
     output_hdl(hdl, response)
 
 def LDL_driver():
-    pass
+    ldl = get_input('LDL')
 
-def get_input_hdl() -> int:
-    return int(input('Enter HDL test result: '))
+def get_input(input_type: str) -> int:
+    return int(input('Enter {} test result: '.format(input_type)))
 
 def check_hdl(value: int) -> str:
     if value >= 60:

@@ -10,5 +10,13 @@ def interface():
         elif choice == '1':
             HDL_driver()
 
+def HDL_driver():
+    # get input
+    hdl = get_input()
+    # check if HDL is normal
+    response = check_hdl(hdl)
+    # output
+    output(response)
+
 interface()
 

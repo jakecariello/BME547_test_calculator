@@ -43,5 +43,5 @@ def check(check_type: str, value: int) -> str:
 def output(output_type: str, value: int, response: str):
     print('{} value of {} is classified as \'{}\''.format(output_type, value, response))
 
-interface()
-
+if __name__ == "__main__":
+    interface()
